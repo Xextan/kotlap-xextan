@@ -1,0 +1,137 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin-top: 0;
+}
+
+@font-face {
+    font-family: 'DIN1451-H';
+    src: url(/DIN1451_4H_08.87.ttf);
+}
+
+:root {
+    --primary: light-dark(#CC88FF, #330033);
+    --secondary: light-dark(#AA55DD, #660066);
+    --text: light-dark(#222222, #dddddd);
+}
+
+html {
+    color-scheme: dark;
+    padding: 0.5rem;
+    font-family: 'DIN1451-H', Arial, Helvetica, sans-serif;
+    font-size: 18pt;
+    min-height: 100%;
+    background-color: var(--primary);
+    &:has(#mode-switcher:checked) {
+        color-scheme: light;
+    }
+}
+
+body {
+    margin: 0 auto;
+    max-width: min(900px, 100%);
+}
+
+.notice {
+    text-align: center;
+    padding: 2px;
+}
+
+.construction {
+    background-image: repeating-linear-gradient(135deg, #666 0, #666 20px, #660 20px, #660 40px, #666 40px);
+    html:has(#mode-switcher:checked) & {
+        background-image: repeating-linear-gradient(135deg, #bbb 0, #bbb 20px, #ee0 20px, #ee0 40px, #bbb 40px);
+    }
+}
+
+.no-js {
+    background-color: light-dark(#f66, #600);
+}
+
+#mode-switcher {
+    display: none;
+}
+
+#header-link {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+.mode-switcher-btn {
+    background-color: light-dark(yellow, white);
+    height: 80px;
+    width: 50px;
+    display: inline-block;
+    right: 0;
+    position: absolute;
+    cursor: pointer;
+}
+
+header {
+    height: 84px;
+    position: relative;
+    border: 2px solid light-dark(var(--secondary), var(--primary));
+    margin-bottom: 0.5rem;
+    &:has(#mode-switcher:checked) {
+        
+    }
+}
+
+main {
+    border: 2px solid light-dark(var(--secondary), var(--primary));
+    background-color: light-dark(var(--primary), var(--secondary));
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+nav > ul {
+    padding-left: 0;
+    margin-bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.1rem 0.5rem;
+}
+nav > ul > li {
+    padding: 0 0.5rem;
+    border-radius: 0.2rem 0.2rem 0 0;
+    display: inline-block;
+    flex: 1 auto;
+    background-color: var(--secondary);
+    &:not(:first-of-type) {
+        
+    }
+    > * {
+        color: var(--text);
+    }
+}
+
+main::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+blockquote {
+    border-left: 2px solid currentColor;
+    padding-left: 10px;
+    margin-left: 28px;
+}
+
+footer {
+    margin: auto;
+    width: fit-content;
+}
+
+code, kbd, samp, var {
+    font-family: inherit;
+    font-style: italic;
+    color: light-dark(var(--tertiary), var(--primary));
+}
+
+.float {
+    float: right;
+    padding: 0.5em 0 0.5em 0.5em;
+}

@@ -1,0 +1,9 @@
+# Generated files
+_site/
+
+# Package files
+node_modules/
+static/pkgs/
+
+# macOS-specific
+.DS_Store
