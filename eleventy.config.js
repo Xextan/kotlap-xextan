@@ -25,7 +25,7 @@ export default function (eleventyConfig) {
 		type: "rss",
 		outputPath: "/feed.xml",
 		collection: {
-			name: "post", // iterate over `collections.post`
+			name: "pobbuk", // iterate over `collections.post`
 			limit: 20,     // 0 means no limit
 		},
 		metadata: {
@@ -34,7 +34,7 @@ export default function (eleventyConfig) {
 			subtitle: "",
 			base: "https://xextan.org/",
 			author: {
-				name: "C.Ezra.M",
+				name: "Rachel Isabel Gardener",
 				email: "",
 			}
 		}
