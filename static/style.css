@@ -163,6 +163,10 @@ code, kbd, samp, var {
     color: light-dark(var(--tertiary), var(--primary));
 }
 
+pre {
+    text-wrap: auto;
+}
+
 .float {
     float: right;
     padding: 0.5em 0 0.5em 0.5em;
